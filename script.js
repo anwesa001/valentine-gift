@@ -118,31 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scene 0: Opening Card ---
     const btnOpenCard = document.getElementById('btn-open-card');
-    const scene0Front = document.querySelector('#scene-0 .front');
-    const scene0Inside = document.querySelector('#scene-0 .inside');
-    const btnScene0 = document.getElementById('btn-scene-0');
 
-    if (btnOpenCard && scene0Front && scene0Inside) {
+    if (btnOpenCard) {
         btnOpenCard.addEventListener('click', () => {
-            // Hide front
-            scene0Front.style.display = 'none'; // Or use a fade effect if desired
-
-            // Show inside after a short delay or immediately
-            // Logic says: "wait 2 seconds before showing text"
-            // But the text has `delay-1` etc classes. 
-            // So we just reveal the container, and CSS animations handle the text delays.
-
-            scene0Inside.classList.remove('hidden');
-            // Trigger reflow just in case
-            void scene0Inside.offsetWidth;
-
-            // Note: The text inside has `fade-in delay-1`, so it starts fading in 1s AFTER we remove hidden.
-            // That roughly matches "Wait 2 seconds" (1s delay + 2s animation start).
-        });
-    }
-
-    if (btnScene0) {
-        btnScene0.addEventListener('click', () => {
             goToScene(1);
         });
     }
