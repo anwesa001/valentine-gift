@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-container">
+        <!-- Background Layers for Cross-fading -->
+        <div id="bg-layer-1" class="bg-layer active" style="background-image: url('imgs/first.png');"></div>
+        <div id="bg-layer-2" class="bg-layer"></div>
+        <div class="overlay"></div>
+    </div>
+
+    <audio id="bg-audio" loop>
+        <source src="bg-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <main id="app">
+        <!-- Scene 1: Invitation -->
+        <section id="scene-1" class="scene active">
+            <div class="content">
+                <p class="fade-in delay-1">There are some things I don’t say often…</p>
+                <p class="fade-in delay-2">not because I don’t feel them…</p>
+                <p class="fade-in delay-3">but because they live deeper than words.</p>
+                <button id="btn-start" class="fade-in delay-4">Let me show you</button>
+            </div>
+        </section>
+
+        <!-- Scene 2: Emotional Reflection -->
+        <section id="scene-2" class="scene">
+            <div class="content">
+                <p class="fade-in">With you, I learned something I never understood before…</p>
+                <div class="cards-container">
+                    <div class="card fade-in delay-1">That love doesn’t have to be loud</div>
+                    <div class="card fade-in delay-2">That silence can feel comfortable</div>
+                    <div class="card fade-in delay-3">That taking things slowly can feel right</div>
+                    <div class="card fade-in delay-4">That I can just be myself</div>
+                </div>
+                <button id="btn-scene-2" class="next-btn fade-in delay-5">Continue</button>
+            </div>
+        </section>
+
+        <!-- Scene 3: Memories and Meaning -->
+        <section id="scene-3" class="scene">
+            <div class="content">
+                <p>Tap to reveal...</p>
+                <div class="interactive-area">
+                    <div class="memory-point" data-msg="The way you listen"></div>
+                    <div class="memory-point" data-msg="The way you make me feel"></div>
+                    <div class="memory-point" data-msg="The person you are and ought to be"></div>
+                </div>
+                <div id="memory-text" class="memory-text"></div>
+                <button id="btn-scene-3" class="next-btn hidden">Continue</button>
+            </div>
+        </section>
+
+        <!-- Scene 4: Vulnerability and Healing -->
+        <section id="scene-4" class="scene">
+            <div class="content">
+                <p class="fade-in">I have known difficult days…</p>
+                <p class="fade-in delay-2">I have known fear…</p>
+                <p class="fade-in delay-4">and I have known what it feels like to be fragile.</p>
+                <div class="spacer"></div>
+                <p class="fade-in delay-6 highlight">But with you…</p>
+                <p class="fade-in delay-8">I learned what it feels like to be held, even when nothing is said.</p>
+                <button id="btn-scene-4" class="next-btn fade-in delay-10">Continue</button>
+            </div>
+        </section>
+
+        <!-- Scene 5: Gratitude -->
+        <section id="scene-5" class="scene">
+            <div class="content">
+                <p class="fade-in">You didn’t just love me…</p>
+                <p class="fade-in delay-2">you made my world gentler.</p>
+                <p class="fade-in delay-4">You made my inner child feel safe.</p>
+                <p class="fade-in delay-6">And that is something I will always be grateful for.</p>
+                <button id="btn-scene-5" class="next-btn fade-in delay-8">Continue</button>
+            </div>
+        </section>
+
+        <!-- Scene 6: Final Scene -->
+        <section id="scene-6" class="scene">
+            <div class="content">
+                <h1 class="fade-in">Thank you for being my <span class="safe-place-text">safe place</span>.</h1>
+                <div class="custom-player">
+                    <button id="player-control-btn" class="play-btn">
+                        <span class="icon">▶</span>
+                    </button>
+                    <div class="player-track">
+                        <span id="current-time">0:00</span>
+                        <input type="range" id="seek-slider" max="100" value="0">
+                        <span id="duration">0:00</span>
+                    </div>
+                    <div class="speed-control">
+                        <span id="speed-btn">1x</span>
+                        <div class="speed-options">
+                            <span data-speed="1">1x</span>
+                            <span data-speed="1.5">1.5x</span>
+                            <span data-speed="1.75">1.75x</span>
+                            <span data-speed="2">2x</span>
+                        </div>
+                    </div>
+                    <audio id="voice-note" preload="metadata">
+                        <source src="A%20Dedication%20A%20Song%20for%20You.m4a" type="audio/mp4">
+                    </audio>
+                </div>
+                <button id="btn-scene-6" class="next-btn fade-in delay-4 hidden">One last thing...</button>
+            </div>
+        </section>
+
+        <!-- Scene 7: Closing Line -->
+        <section id="scene-7" class="scene">
+            <div class="content">
+                <p class="fade-in">I’m really glad it’s <span class="emphasized-you">You</span>.</p>
+                <div class="spacer"></div>
+                <p class="fade-in delay-3 final-msg">Home isn’t a place. It’s <span class="emphasized-you">You</span>.
+                </p>
+                <div class="image-container fade-in delay-5">
+                    <img src="imgs/couple_photo.jpg" alt="Us" class="final-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
