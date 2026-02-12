@@ -118,11 +118,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scene 0: Opening Card ---
     const btnOpenCard = document.getElementById('btn-open-card');
+    console.log("Checking for Open Card Button:", btnOpenCard); // DEBUG
 
     if (btnOpenCard) {
         btnOpenCard.addEventListener('click', () => {
+            console.log("Open Button Clicked!"); // DEBUG
+            // Go directly to Scene 1
             goToScene(1);
         });
+    } else {
+        console.error("Open Card Button NOT FOUND"); // DEBUG
     }
 
     // --- Scene 1: Start ---
