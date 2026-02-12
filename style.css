@@ -171,6 +171,117 @@ button:hover {
     animation-delay: 10s;
 }
 
+/* Scene 0 Specifics - Opening Card */
+#scene-0 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Warm gradient background for Scene 0 */
+    background: linear-gradient(135deg, #2a1b3d 0%, #44315f 50%, #8b5a80 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.card-container {
+    perspective: 1000px;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+}
+
+.envelope {
+    width: 100%;
+    height: 100%;
+    background: #fdf5e6;
+    /* Old lace color */
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s;
+    padding: 20px;
+    text-align: center;
+}
+
+.envelope:hover {
+    transform: translateY(-5px);
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.stamp {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.card-hint {
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: #5d4037;
+    font-size: 1.1rem;
+}
+
+.open-btn {
+    background: #d8bfd8;
+    color: #2a1b3d;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.open-btn:hover {
+    background: #dda0dd;
+    color: #fff;
+}
+
+.inside {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text {
+    font-family: var(--font-heading);
+    color: #5d4037;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    opacity: 0;
+    /* Handled by fade-in */
+}
+
+/* Override button for inside card to fit theme */
+#btn-scene-0 {
+    background: transparent;
+    border: 1px solid #5d4037;
+    color: #5d4037;
+    margin-top: 15px;
+}
+
+#btn-scene-0:hover {
+    background: #5d4037;
+    color: #fdf5e6;
+}
+
 /* Scene 2 Specifics */
 .cards-container {
     display: flex;

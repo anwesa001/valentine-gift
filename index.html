@@ -28,8 +28,28 @@
     </audio>
 
     <main id="app">
+        <!-- Scene 0: Opening Card -->
+        <section id="scene-0" class="scene active">
+            <div class="card-container">
+                <div class="envelope">
+                    <div class="front">
+                        <div class="stamp">❤️</div>
+                        <p class="card-hint">Open when you have a quiet moment</p>
+                        <button id="btn-open-card" class="open-btn">Open</button>
+                    </div>
+                    <div class="inside hidden">
+                        <p class="card-text fade-in delay-1">I wanted to say some things…</p>
+                        <p class="card-text fade-in delay-3">slowly…</p>
+                        <p class="card-text fade-in delay-5">in my own time…</p>
+                        <p class="card-text fade-in delay-7">the way we’re learning to take life.</p>
+                        <button id="btn-scene-0" class="next-btn fade-in delay-9">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Scene 1: Invitation -->
-        <section id="scene-1" class="scene active">
+        <section id="scene-1" class="scene">
             <div class="content">
                 <p class="fade-in delay-1">There are some things I don’t say often…</p>
                 <p class="fade-in delay-2">not because I don’t feel them…</p>
