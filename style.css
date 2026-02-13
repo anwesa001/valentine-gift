@@ -368,16 +368,30 @@ button:hover {
 }
 
 .memory-point.clicked {
-    background: url('imgs/sunflower.svg') no-repeat center center !important;
-    background-size: contain !important;
-    background-color: transparent !important;
-    width: 40px;
-    height: 40px;
     transform: rotate(0) scale(1.2) !important;
     border-radius: 0;
     opacity: 1 !important;
     animation: none !important;
     box-shadow: none;
+    background-color: transparent !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    width: 60px;
+    /* Increased size for flower detail */
+    height: 60px;
+}
+
+.memory-point.clicked.mp-hibiscus {
+    background-image: url('imgs/hibiscus.svg') !important;
+}
+
+.memory-point.clicked.mp-lily {
+    background-image: url('imgs/lily.svg') !important;
+}
+
+.memory-point.clicked.mp-sunflower {
+    background-image: url('imgs/sunflower.svg') !important;
 }
 
 .memory-point.clicked::before,

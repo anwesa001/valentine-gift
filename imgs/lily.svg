@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Petals -->
+  <g fill="#E6E6FA" stroke="#9370DB" stroke-width="1">
+    <!-- Top -->
+    <path d="M50 50 Q40 20 50 5 Q60 20 50 50 Z" />
+    <!-- Bottom -->
+    <path d="M50 50 Q40 80 50 95 Q60 80 50 50 Z" />
+    <!-- Top Left -->
+    <path d="M50 50 Q20 30 10 20 Q30 50 50 50 Z" />
+    <!-- Top Right -->
+    <path d="M50 50 Q80 30 90 20 Q70 50 50 50 Z" />
+    <!-- Bottom Left -->
+    <path d="M50 50 Q20 70 10 80 Q30 50 50 50 Z" />
+    <!-- Bottom Right -->
+    <path d="M50 50 Q80 70 90 80 Q70 50 50 50 Z" />
+  </g>
+
+  <!-- Center Detail -->
+  <circle cx="50" cy="50" r="10" fill="#FFFFE0" opacity="0.8"/>
+
+  <!-- Face -->
+  <g fill="#333">
+    <!-- Eyes -->
+    <ellipse cx="42" cy="48" rx="2" ry="3" />
+    <ellipse cx="58" cy="48" rx="2" ry="3" />
+    <!-- Smile -->
+    <path d="M42 55 Q50 62 58 55" stroke="#333" stroke-width="1.5" fill="none" />
+  </g>
+</svg>
