@@ -368,14 +368,15 @@ button:hover {
 }
 
 .memory-point.clicked {
-    background: url('imgs/sunflower.svg') no-repeat center center;
-    background-size: contain;
+    background: url('imgs/sunflower.svg') no-repeat center center !important;
+    background-size: contain !important;
+    background-color: transparent !important;
     width: 40px;
     height: 40px;
-    transform: rotate(0) scale(1.2);
+    transform: rotate(0) scale(1.2) !important;
     border-radius: 0;
-    opacity: 1;
-    animation: none;
+    opacity: 1 !important;
+    animation: none !important;
     box-shadow: none;
 }
 
