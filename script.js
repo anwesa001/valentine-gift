@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
         7: 'imgs/seventh.png'
     };
 
+    // --- Preload Images ---
+    setTimeout(() => {
+        Object.values(bgImages).forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, 1000); // Slight delay to prioritize initial render
+
     function changeBackground(sceneNum) {
         const bgUrl = bgImages[sceneNum];
         if (!bgUrl) return;
