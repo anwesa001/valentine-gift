@@ -383,15 +383,15 @@ button:hover {
 }
 
 .memory-point.clicked.mp-hibiscus {
-    background-image: url('imgs/hibiscus.svg') !important;
+    background-image: url('imgs/hibiscus.png') !important;
 }
 
 .memory-point.clicked.mp-lily {
-    background-image: url('imgs/lily.svg') !important;
+    background-image: url('imgs/lily.png') !important;
 }
 
 .memory-point.clicked.mp-sunflower {
-    background-image: url('imgs/sunflower.svg') !important;
+    background-image: url('imgs/sunflower.png') !important;
 }
 
 .memory-point.clicked::before,
