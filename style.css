@@ -236,27 +236,35 @@ button:hover {
     font-size: 1.1rem;
 }
 
-.open-btn {
-    background-color: transparent;
-    border: none;
-    background-image: url('imgs/Hide.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 120px;
-    height: 120px;
-    color: transparent;
-    margin-top: 40px;
+.snoopy-standing {
+    position: absolute;
+    bottom: 95%;
+    /* Adjust to sit on top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: auto;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    z-index: 200;
+    transition: transform 0.3s ease;
+    /* Optional: minimal bounce */
+    animation: gentle-bounce 2s infinite ease-in-out;
 }
 
-.open-btn:hover,
-.open-btn:active {
-    background-image: url('imgs/Show.jpg');
-    background-color: transparent;
-    color: transparent;
-    transform: scale(1.05);
+.snoopy-standing:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+@keyframes gentle-bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-5px);
+    }
 }
 
 .inside {
