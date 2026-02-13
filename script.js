@@ -125,10 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Scene 0: Opening Card ---
-    const snoopyOpener = document.getElementById('snoopy-opener');
+    const btnOpenCard = document.getElementById('btn-open-card');
 
-    if (snoopyOpener) {
-        snoopyOpener.addEventListener('click', () => {
+    if (btnOpenCard) {
+        btnOpenCard.addEventListener('click', () => {
             // Go directly to Scene 1
             goToScene(1);
         });
