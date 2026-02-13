@@ -189,7 +189,7 @@ button:hover {
 .card-container {
     perspective: 1000px;
     width: 300px;
-    height: 200px;
+    height: 300px;
     position: relative;
     cursor: pointer;
 }
@@ -237,22 +237,26 @@ button:hover {
 }
 
 .open-btn {
-    background: #d8bfd8;
-    color: #2a1b3d;
+    background-color: transparent;
     border: none;
-    padding: 8px 20px;
-    border-radius: 20px;
-    margin-top: 10px;
-    font-weight: 600;
-    position: relative;
-    z-index: 100;
-    /* Ensure it's clickable */
+    background-image: url('imgs/Hide.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 120px;
+    height: 120px;
+    color: transparent;
+    margin-top: 40px;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-.open-btn:hover {
-    background: #dda0dd;
-    color: #fff;
+.open-btn:hover,
+.open-btn:active {
+    background-image: url('imgs/Show.jpg');
+    background-color: transparent;
+    color: transparent;
+    transform: scale(1.05);
 }
 
 .inside {
