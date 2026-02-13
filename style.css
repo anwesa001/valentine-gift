@@ -198,7 +198,6 @@ button:hover {
     width: 100%;
     height: 100%;
     background: #fdf5e6;
-    /* Old lace color */
     border-radius: 5px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     position: relative;
@@ -209,6 +208,74 @@ button:hover {
     transition: transform 0.6s;
     padding: 20px;
     text-align: center;
+    overflow: hidden;
+    /* Ensure flaps don't spill out */
+}
+
+/* Bottom Flap */
+.envelope::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 150px 100px 150px;
+    /* Adjust based on new size 300px width */
+    border-color: transparent transparent #e6ddce transparent;
+    /* Slightly darker than bg */
+    z-index: 0;
+}
+
+/* Side Flaps */
+.envelope::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 150px 150px 0 150px;
+    /* Top down triangle? No, simpler to just use borders */
+    /* Let's try a different approach for sides: 
+       Actually, left and right borders on a full size div? 
+    */
+    display: none;
+    /* Rethink below */
+}
+
+/* Better Approach for Flaps */
+.envelope {
+    /* Existing styles... */
+    background: #fdf5e6;
+}
+
+/* Since we have content on top, maybe just a top flap shadow? 
+   Let's try to make it look like the back of an envelope.
+*/
+.envelope {
+    background: radial-gradient(circle at center, #fdf5e6 30%, #f0e6d6 100%);
+}
+
+.envelope::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Create the "X" of the envelope flaps */
+    background:
+        linear-gradient(to top right, #e6ddce 50%, transparent 51%) bottom left / 50% 50% no-repeat,
+        linear-gradient(to top left, #e6ddce 50%, transparent 51%) bottom right / 50% 50% no-repeat,
+        linear-gradient(to bottom right, #f2e9da 50%, transparent 51%) top left / 50% 50% no-repeat,
+        linear-gradient(to bottom left, #f2e9da 50%, transparent 51%) top right / 50% 50% no-repeat;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+    /* Subtle effect */
 }
 
 .envelope:hover {
@@ -221,6 +288,8 @@ button:hover {
     align-items: center;
     gap: 15px;
     width: 100%;
+    z-index: 1;
+    /* Sit above envelope graphic */
 }
 
 .stamp {
